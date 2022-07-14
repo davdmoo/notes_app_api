@@ -5,6 +5,7 @@ class Note {
   static async getNotes(req, res, next) {
     try {
       const db = getDatabase();
+      console.log(req.query);
 
       const notes = await db.collection("notes").find().toArray();
 
